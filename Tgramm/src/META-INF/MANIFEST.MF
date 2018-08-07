@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: antlr-4.7-complete.jar
+Main-Class: com.cwms3000.plsqlparser.Tool
+
