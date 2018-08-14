@@ -8,16 +8,16 @@ create_package
     (proc|fun|statement)+;
 proc
     : PROCEDURE WORD+
-    statement*
+    (statement*
     BEGIN
     block+
-    END WORD? ';' ;
+    END WORD? ';'|';');
 fun
     : FUNCTION WORD+
-    statement*
+    (statement*
     BEGIN
     block+
-    END WORD? ';' ;
+    END WORD? ';'|';');
 
 
 block
