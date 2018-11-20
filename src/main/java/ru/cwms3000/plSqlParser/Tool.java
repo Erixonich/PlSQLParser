@@ -1,9 +1,9 @@
-package com.cwms3000.plsqlparser;
+package ru.cwms3000.plSqlParser;
 
 
 
-import com.cwms3000.plsqlparser.antlrlib.PlLexer;
-import com.cwms3000.plsqlparser.antlrlib.PlParser;
+import ru.cwms3000.plSqlParser.PlSqlLexer;
+import ru.cwms3000.plSqlParser.PlSqlParser;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 
@@ -58,11 +58,11 @@ public class Tool {
 
             CharStream input = CharStreams.fromStream(inputStream);
 
-            PlLexer lexer = new PlLexer(input);
+            PlSqlLexer lexer = new PlSqlLexer(input);
 
             CommonTokenStream tokens = new CommonTokenStream(lexer);
 
-            PlParser parser = new PlParser(tokens);
+            PlSqlParser parser = new PlSqlParser(tokens);
             parser.removeErrorListeners();
             parser.addErrorListener(new CustomErrorListener());
             parser.setErrorHandler(new CustomErrorStrategy());

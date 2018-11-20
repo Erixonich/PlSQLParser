@@ -1,4 +1,4 @@
-grammar Pl;
+grammar PlSql;
 
 @members {
    int nesting = 0;

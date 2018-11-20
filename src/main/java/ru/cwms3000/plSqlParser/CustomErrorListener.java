@@ -1,4 +1,4 @@
-package com.cwms3000.plsqlparser;
+package ru.cwms3000.plSqlParser;
 
 import org.antlr.v4.runtime.BaseErrorListener;
 import org.antlr.v4.runtime.RecognitionException;

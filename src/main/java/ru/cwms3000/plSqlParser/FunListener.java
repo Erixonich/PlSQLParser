@@ -1,7 +1,7 @@
-package com.cwms3000.plsqlparser;
+package ru.cwms3000.plSqlParser;
 
-import com.cwms3000.plsqlparser.antlrlib.PlParser;
-import com.cwms3000.plsqlparser.antlrlib.PlBaseListener;
+import ru.cwms3000.plSqlParser.PlSqlParser;
+import ru.cwms3000.plSqlParser.PlSqlBaseListener;
 import org.antlr.v4.runtime.ParserRuleContext;
 
 import java.util.HashMap;
@@ -10,16 +10,16 @@ import java.util.Map;
 /**
  * Created by Erixon on 18.10.2017.
  */
-public class FunListener extends PlBaseListener {
+public class FunListener extends PlSqlBaseListener {
     private Map<String, int[]> elms = new HashMap<String, int[]>();
 
     @Override
-    public void enterFunction(PlParser.FunctionContext ctx) {
+    public void enterFunction(PlSqlParser.FunctionContext ctx) {
         addCtxToMap(ctx, ctx.name.getText() + "_FUN");
     }
 
     @Override
-    public void enterProcedure(PlParser.ProcedureContext ctx) {
+    public void enterProcedure(PlSqlParser.ProcedureContext ctx) {
         addCtxToMap(ctx, ctx.name.getText() + "_PROC");
     }
 
